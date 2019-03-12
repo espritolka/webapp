@@ -1,12 +1,12 @@
+var assert = require("assert");
 var operations = require("./operations");
- 
+ 
 it("should multiply two numbers", function(){
-     
-    var expectedResult = 15;
-    var result = operations.multiply(3, 5);
-    if(result!==expectedResult){
-        throw new Error(`Expected ${expectedResult}, but got ${result}`);
-    }
+     
+    var expected = 15;
+    var result = operations.multiply(3, 5);
+    //assert.notEqual() !=
+    assert.equal(result, expected);
 });
 it("should add two numbers", function(){
      
