@@ -4,5 +4,11 @@
   "dependencies": {
     "body-parser": "^1.16.0",
     "express": "^4.14.0"
+  },
+  "scripts":{
+    "test" : "mocha *.test.js"
+  },
+  "devDependencies": {
+    "mocha": "^6.0.2"
   }
 }
