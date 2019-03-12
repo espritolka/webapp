@@ -5,7 +5,7 @@ it("should multiply two numbers", function(){
      
     var expected = 15;
     var result = operations.multiply(3, 5);
-    //assert.notEqual() !=
+    //assert.notEqual() != ++
     assert.equal(result, expected);
 });
 it("should add two numbers", function(){
