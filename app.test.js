@@ -7,7 +7,7 @@ describe("Express Tests", function(){
     it("should return Hello Test", function(done){
          
         request(app)
-            .get("/")
+            .get("/test")
             .expect("Hello Test")
             .end(done);
     });

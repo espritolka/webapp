@@ -5,7 +5,7 @@ var fs = require("fs");
 var app = express();
 var jsonParser = bodyParser.json();
  
-//app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public"));
 // получение списка данных
 app.get("/api/users", function(req, res){
       
@@ -117,7 +117,7 @@ app.put("/api/users", jsonParser, function(req, res){
 app.listen(3000);
 
  
-app.get("/", function (request, response){
+app.get("/test", function (request, response){
      
     response.send("Hello Test");
 });
