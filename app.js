@@ -5,7 +5,7 @@ var fs = require("fs");
 var app = express();
 var jsonParser = bodyParser.json();
  
-app.use(express.static(__dirname + "/public"));
+//app.use(express.static(__dirname + "/public"));
 // получение списка данных
 app.get("/api/users", function(req, res){
       
@@ -114,6 +114,23 @@ app.put("/api/users", jsonParser, function(req, res){
     }
 });
   
-app.listen(3000, function(){
-    console.log("Сервер ожидает подключения...");
+app.listen(3000);
+
+ 
+app.get("/", function (request, response){
+     
+    response.send("Hello Test");
 });
+app.get("/error", function (request, response){
+     
+    response.status(404).send("NotFound");
+});
+ 
+app.get("/user", function (request, response){
+     
+    response.send({name:"Tom", age: 22});
+});
+ 
+
+ 
+module.exports.app = app;
